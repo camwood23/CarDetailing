@@ -1,35 +1,71 @@
 .header {
     display: flex;
-    justify-content: center;
-    flex: 1;
-    background-image: linear-gradient(to bottom right, rgba(#a9a9a9, .5), rgba(#a9a9a9 , .5   )), url(../img/headercity.jpg);
-    background-size: cover;
-    background-position: center;
-
+    margin-bottom: 4rem;
     min-height: 80vh;
 
+    &__left {
+        background-image: url(../img/audi-automobile-automotive-car-237195.jpg);
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__right {
+        background-image: url(../img/auto-automobile-automotive-car-305070.jpg);
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+    }
+
     &__backdrop {
-        flex: 0 0 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        z-index: 1;
-
-        //background-color: rgba(#a9a9a9, .7);
+        padding: 2rem 5rem;
+        background-color:#a9a9a9;
     }
 
     &__primary {
         font-size: 7rem;
-        color: var(--color-white);
+        // color: var(--color-white);
     }
 
     &__sub {
         font-size: 3rem;
-        color: #fff;
+        // color: #fff;
         // background-color: #2b2d2f;
 
         padding: 1rem 5rem;
     }
+}
+
+.heading-primary {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.about {
+    &__text {
+        font-size: 1.5rem;
+    }
+
+    &__image {
+        width: 80rem;
+        margin: 2rem;
+        box-shadow: 0 0 1rem rgba(#000, .4);
+    }
+}
+
+.price-card {
+    margin: 2rem;
+    padding: 1rem 2rem;
+    background-color: orangered;
 }
