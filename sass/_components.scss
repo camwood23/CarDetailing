@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    position: relative;
     margin-bottom: 4rem;
     min-height: 80vh;
 
@@ -24,12 +25,16 @@
 
     &__backdrop {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
         align-items: center;
 
         padding: 2rem 5rem;
-        background-color:#a9a9a9;
+        background-color:rgba(#a9a9a9, .9);
+        font-family: 'Lobster', cursive;
+        font-weight: 400;
     }
 
     &__primary {
@@ -43,6 +48,11 @@
         // background-color: #2b2d2f;
 
         padding: 1rem 5rem;
+        margin-right: auto;
+    }
+
+    &__phone {
+        font-size: 2rem;
     }
 }
 
@@ -64,8 +74,36 @@
     }
 }
 
-.price-card {
+.service-card {
     margin: 2rem;
     padding: 1rem 2rem;
-    background-color: orangered;
+    flex: 1;
+    border: 1px solid #000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__name {
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    background-color: yellow;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 100px;
+    box-shadow: 0 0 1rem rgba(#000, .4);
+    transition: all .2s;
+
+    &:hover {
+        transform: translateY(-.2rem);
+        box-shadow: 0 .2rem 1rem rgba(#000, .4);
+    }
 }
