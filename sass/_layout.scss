@@ -13,6 +13,7 @@
 .section {
     min-height: 50vh;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     padding: 0 5rem;
@@ -20,6 +21,10 @@
 
     &__about {
         flex-direction: row;
+    }
+
+    &__contact {
+      font-size: 1.2rem;
     }
 }
 
