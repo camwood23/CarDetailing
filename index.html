@@ -10,70 +10,59 @@
     </head>
     <body>
         <div class="container">
-            <header class="header">
-                <div class="header__backdrop">
-                    <h1 class="header__primary">C&S</h1>
+            <nav class="nav-bar">
+                <div class="nav-bar__company-name">C&amp;S Car Cleaning Services</div>
+                <a href="#header" class="nav-bar__link nav-bar__link__home">Home</a>
+                <a href="#services" class="nav-bar__link nav-bar__link__services">Services</a>
+                <a href="#about" class="nav-bar__link nav-bar__link__about">About</a>
+                <a href="#contact" class="nav-bar__link nav-bar__link__contact">Contact</a>
+            </nav>
+            <header id="header" class="header">
+                <!-- <div class="header__backdrop">
+                    <h1 class="header__primary">C&amp;S</h1>
                     <h2 class="header__sub">Car Cleaning Service LLC</h2>
-                    <span class="header__phone">(888)888-8888</span>
-                </div>
+                    <span class="header__phone">(704)813-0530</span>
+                </div> -->
                 <div class="header__left"></div>
                 <div class="header__right"></div>
             </header>
-            <section class="section section__services">
-                <h2 class="heading-primary">Services</h2>
+            <section id="services" class="section section__services">
+                <h2 class="heading-primary"> Our Services</h2>
                 <div class="container__services">
                     <div class="service-card">
                         <span class="service-card__name">Basic Wash</span>
-                        <span class="service-card__heading">Exterior</span>
-                        <ul class="list__services">
-                            <li class="items__services">Wash</li>
-                            <li class="items__services">Rinse Wheel Wells</li>
-                            <li class="items__services">Dry</li>
-                            <li class="items__services">Tire Shine</li>
-                        </ul>
-                        <span class="service-card__heading">Interior</span>
-                        <ul class="list__services">
-                            <li class="items__services">Vacuum</li>
-                            <li class="items__services">Wipe Dash/Console</li>
-                            <li class="items__services">Door Jambs</li>
-                            <li class="items__services">Windows</li>
-                        </ul>
+                        <span class="service-card__price">&#36;30</span>
+                        <p class="service-card__summary">
+                            This package includes a simple wash of the exterior and vacuuming of interior
+                        </p>
+                        <a href="#basic_wash" class="service-card__details-btn">Details</a>
                     </div>
                     <div class="service-card">
                         <span class="service-card__name">Basic Detailing</span>
-                        <span class="service-card__heading">Basic Wash +</span>
-                        <ul class="list__services">
-                            <li class="items__services">Wash Floor Mats</li>
-                            <li class="items__services">Coat of Wax</li>
-                        </ul>
+                        <span class="service-card__price">&#36;75</span>
+                        <p class="service-card__summary">
+                            This package includes the basic wash, plus a coat of wax
+                        </p>
+                        <a href="#basic_detail" class="service-card__details-btn">Details</a>
                     </div>
                     <div class="service-card">
                         <span class="service-card__name">Full Detailing</span>
-                        <span class="service-card__heading">Exterior</span>
-                        <ul class="list__services">
-                            <li class="items__services">Wash</li>
-                            <li class="items__services">Engine Compartment</li>
-                            <li class="items__services">Door Jambs</li>
-                            <li class="items__services">Wheel Wells</li>
-                            <li class="items__services">Under Carriage</li>
-                            <li class="items__services">Bugg</li>
-                            <li class="items__services">Wax</li>
-                            <li class="items__services">Tire Shine</li>
-                            <li class="items__services">Trim</li>
-                            <li class="items__services">Windows</li>
-                        </ul>
-                        <span class="service-card__heading">Interior</span>
-                        <ul class="list__services">
-                            <li class="items__services">Vacuum</li>
-                            <li class="items__services">Clean Panels</li>
-                            <li class="items__services">Shampoo Floor/Upholstery</li>
-                            <li class="items__services">Trunk</li>
-                            <li class="items__services">Windows</li>
-                        </ul>
+                        <span class="service-card__price">&#36;150</span>
+                        <p class="service-card__summary">
+                            This package includes the Basic Detailing, plus we will wash engine compartment, under cariage, and shampoo interior
+                        </p>
+                        <a href="#full_detail" class="service-card__details-btn">Details</a>
+                    </div>
+                    <div class="service-card">
+                        <span class="service-card__name">Extras</span>
+                        <p class="service-card__summary">
+                            Here are some extra services that can be purchased either on their own or in addition to any packages
+                        </p>
+                        <a href="#extras" class="service-card__details-btn">Details</a>
                     </div>
                 </div>
             </section>
-            <section class="section section__about">
+            <section id="about" class="section section__about">
                 <div class="about__info">
                     <h2 class="heading-primary">About Us</h2>
                     <p class="about__text">
@@ -82,10 +71,11 @@
                 </div>
                 <img src="img/people-looking-at-laptop-computer-1595391.jpg" alt="family photo" class="about__image">
             </section>
-            <section class="section section__contact">
+            <section id="contact" class="section section__contact">
                 <h2 class="heading-primary">Contact Us</h2>
-                <span class="address">1111 Awesome Rd, Gastonia, NC 28787</span>
-                <span class="phone">(888)888-888</span>
+                <span class="address">803 East Garrison Blvd, Gastonia, NC 28054</span>
+                <span class="phone">(704)813-0530</span>
+                <span class="email">c.s.autodetailings@gmail.com</span>
                 <h3 class="heading-secondary">Hours</h3>
                 <ul class="hours__list">
                     <li class="hours__item">Monday-Friday: 8AM-5PM</li>

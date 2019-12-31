@@ -1,8 +1,8 @@
 .header {
     display: flex;
     position: relative;
-    margin-bottom: 4rem;
     min-height: 80vh;
+    padding-top: 4rem;
 
     &__left {
         background-image: url(../img/audi-automobile-automotive-car-237195.jpg);
@@ -15,7 +15,7 @@
         align-items: center;
         flex-direction: column;
 
-        @media only screen and (max-width: 600px) {
+        @include respond(tab-port) {
           display: none;
         }
     }
@@ -46,7 +46,15 @@
         font-size: 7rem;
         // color: var(--color-white);
 
-        @media only screen and (max-width: 600px) {
+        @include respond(tab-land) {
+          font-size: 6rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 5rem;
+        }
+
+        @include respond(phone) {
           font-size: 4rem;
         }
     }
@@ -58,7 +66,16 @@
 
         padding: 1rem 5rem;
         margin-right: auto;
-        @media only screen and (max-width: 600px) {
+
+        @include respond(tab-land) {
+          font-size: 2.5rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 2.25rem;
+        }
+
+        @include respond(phone) {
           font-size: 2rem;
         }
     }
@@ -88,7 +105,7 @@
     }
 
     &__image {
-        width: 140rem;
+        width: 40%;
         margin: 2rem;
         box-shadow: 0 0 1rem rgba(#000, .4);
     }
@@ -98,22 +115,44 @@
     margin: 2rem;
     padding: 1rem 2rem;
     flex: 1;
-    border: 1px solid #000;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     &__name {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 400;
         text-align: center;
+        margin-bottom: 1rem;
     }
 
-    &__heading {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: .5rem 0;
+    &__price {
+      font-size: 5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    &__summary {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &__details-btn {
+      text-decoration: none;
+      color: black;
+      background-image: linear-gradient(to right bottom, yellow 10%, grey);
+      padding: 1rem 1.5rem;
+      border-radius: 100px;
+      font-size: 2rem;
+      box-shadow: .2rem .5rem .5rem rgba(#000, .4);
+
+      &:hover {
+        transform: translateY(-.1rem);
+        box-shadow: .2rem .6rem .6rem rgba(#000, .4);
+      }
     }
 }
 
