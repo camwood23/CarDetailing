@@ -14,6 +14,10 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
     }
 
     &__right {
@@ -24,6 +28,7 @@
     }
 
     &__backdrop {
+      color: yellow;
         display: flex;
         top: 0;
         left: 0;
@@ -40,6 +45,10 @@
     &__primary {
         font-size: 7rem;
         // color: var(--color-white);
+
+        @media only screen and (max-width: 600px) {
+          font-size: 4rem;
+        }
     }
 
     &__sub {
@@ -49,6 +58,9 @@
 
         padding: 1rem 5rem;
         margin-right: auto;
+        @media only screen and (max-width: 600px) {
+          font-size: 2rem;
+        }
     }
 
     &__phone {
@@ -76,7 +88,7 @@
     }
 
     &__image {
-        width: 80rem;
+        width: 140rem;
         margin: 2rem;
         box-shadow: 0 0 1rem rgba(#000, .4);
     }
