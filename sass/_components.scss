@@ -1,8 +1,13 @@
 .header {
     display: flex;
-    position: relative;
-    min-height: 80vh;
+    position: fixed;
+    height: 80vh;
+    width: 100%;
     padding-top: 4rem;
+
+    z-index: -1;
+    top: 0;
+    left: 0;
 
     &__left {
         background-image: url(../img/audi-automobile-automotive-car-237195.jpg);
@@ -87,14 +92,18 @@
 
 .heading {
   &-primary {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 1.1;
     margin-bottom: 2rem;
+    color: #777;
+    font-family: "Spectral SC", serif;
   }
 
   &-secondary {
-    font-size: 2rem;
+    font-size: 2.6rem;
     margin: 1rem 0;
+    font-family: "Spectral SC", serif;
   }
 }
 
@@ -132,6 +141,26 @@
       font-size: 5rem;
       font-weight: 400;
       margin-bottom: 1rem;
+    }
+
+    &__img {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      margin: 1rem;
+      &--1 {
+        background-image: url(../img/basic-wash.jpg);
+      }
+
+      &--2 {
+        background-image: url(../img/basic-detailing.jpg);
+      }
+
+      &--3 {
+        background-image: url(../img/full-detailing.jpg);
+      }
     }
 
     &__summary {
@@ -192,4 +221,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.hrule {
+  width: 75%;
+  border: 0;
+  height: 2px;
+  margin: 3rem 0;
+  background-image: -webkit-linear-gradient(left, #fff, #ccc, #fff);
 }

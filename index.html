@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Spectral+SC&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Car Detailing</title>
     </head>
@@ -38,10 +38,11 @@
             </header>
             <section id="services" class="section section__services">
                 <h2 class="heading-primary"> Our Services</h2>
+                <hr class="hrule">
                 <div class="container__services">
                     <div class="service-card">
                         <span class="service-card__name">Basic Wash</span>
-                        <span class="service-card__price">&#36;30</span>
+                        <div class="service-card__img service-card__img--1"></div>
                         <p class="service-card__summary">
                             This package includes a simple wash of the exterior and vacuuming of interior
                         </p>
@@ -49,7 +50,7 @@
                     </div>
                     <div class="service-card">
                         <span class="service-card__name">Basic Detailing</span>
-                        <span class="service-card__price">&#36;75</span>
+                        <div class="service-card__img service-card__img--2"></div>
                         <p class="service-card__summary">
                             This package includes the basic wash, plus a coat of wax
                         </p>
@@ -57,7 +58,7 @@
                     </div>
                     <div class="service-card">
                         <span class="service-card__name">Full Detailing</span>
-                        <span class="service-card__price">&#36;150</span>
+                        <div class="service-card__img service-card__img--3"></div>
                         <p class="service-card__summary">
                             This package includes the Basic Detailing, plus we will wash engine compartment, under cariage, and shampoo interior
                         </p>
@@ -94,7 +95,12 @@
                 </ul>
             </section>
             <footer class="footer">
-
+                <div class="footer_links">
+                    <a href="#" class="footer__link">Terms &amp; Conditions</a>
+                    |
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </div>
+                <span class="copywrite">&copy; C&S Car Cleaning Services</span>
             </footer>
     </body>
 </html>
