@@ -1,226 +1,191 @@
 .header {
-    display: flex;
-    position: fixed;
-    height: 80vh;
+  display: flex;
+  height: 80vh;
+  @include respond(xsm) {
+    flex-direction: column;
+    height: 100vh;
+  }
+  width: 100%;
+  background-color: #f3f8f2;
+
+  font-weight: 400;
+  // border-bottom: 1px solid #777;
+
+  &__photos {
+    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 40vh);
+    gap: 15px;
+    @include respond(xsm) {
+      display: block;
+      width: 100%;
+      height: 50%;
+      order: 1;
+    }
+  }
+
+  &__photo {
     width: 100%;
-    padding-top: 4rem;
+    height: 100%;
+    object-fit: cover;
+    &--1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      @include respond(sm) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+    &--2 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      @include respond(sm) {
+        display: none;
+      }
+    }
+    &--3 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      @include respond(sm) {
+        display: none;
+      }
+    }
+  }
 
-    z-index: -1;
-    top: 0;
-    left: 0;
+  &__main {
+    width: 40%;
+    @include respond(sm) {
+      width: 45%;
+    }
+    @include respond(xsm) {
+      width: 100%;
+      order: 2;
+    }
+    display: flex;
+    flex-direction: column;
 
-    &__left {
-        background-image: url(../img/audi-automobile-automotive-car-237195.jpg);
-        background-size: cover;
-        background-position: center;
-        flex: 1;
+    &__contact {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-left: 10%;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        @include respond(tab-port) {
-          display: none;
-        }
+      & p {
+        margin-bottom: 0.5rem;
+      }
+      & .address {
+        // text-decoration: none;
+        margin-bottom: 0.5rem;
+        color: #000;
+      }
     }
 
-    &__right {
-        background-image: url(../img/auto-automobile-automotive-car-305070.jpg);
-        background-size: cover;
-        background-position: center;
-        flex: 1;
+    & h1 {
+      margin-left: 10%;
+      margin-top: 25%;
+      font-size: 10rem;
+      font-weight: 500;
+
+      @include respond(xsm) {
+        margin-top: 5%;
+      }
     }
 
-    &__backdrop {
-      color: yellow;
-        display: flex;
-        top: 0;
-        left: 0;
-        width: 100%;
-        position: absolute;
-        align-items: center;
+    & h2 {
+      margin-left: 10%;
+      font-size: 5rem;
+      font-weight: 400;
 
-        padding: 2rem 5rem;
-        background-color:rgba(#a9a9a9, .9);
-        font-family: 'Lobster', cursive;
-        font-weight: 400;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
-    &__primary {
-        font-size: 7rem;
-        // color: var(--color-white);
+    &__divider {
+      background-color: #000;
+      height: 20%;
+      width: 15px;
+      margin-left: 10%;
+    }
+  }
 
-        @include respond(tab-land) {
-          font-size: 6rem;
-        }
-
-        @include respond(tab-port) {
-          font-size: 5rem;
-        }
-
-        @include respond(phone) {
-          font-size: 4rem;
-        }
+  &__sub {
+    display: flex;
+    @include respond(sm) {
+      display: none;
     }
 
-    &__sub {
-        font-size: 3rem;
-        // color: #fff;
-        // background-color: #2b2d2f;
+    flex-direction: column;
+    width: 5%;
 
-        padding: 1rem 5rem;
-        margin-right: auto;
+    &__sm_divider {
+      background-color: #000;
+      width: 2px;
+      height: 10%;
+      margin-left: 50%;
 
-        @include respond(tab-land) {
-          font-size: 2.5rem;
-        }
-
-        @include respond(tab-port) {
-          font-size: 2.25rem;
-        }
-
-        @include respond(phone) {
-          font-size: 2rem;
-        }
+      &:first-of-type {
+        margin-top: 20rem;
+        margin-bottom: 30%;
+      }
     }
 
-    &__phone {
-        font-size: 2rem;
+    &__square_divider {
+      background-color: #000;
+      width: 100%;
+      height: 10rem;
+      margin-bottom: 5rem;
+      margin-top: auto;
     }
+  }
 }
 
 .heading {
   &-primary {
-    font-size: 3.6rem;
+    font-size: 4.5rem;
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 2rem;
-    color: #777;
-    font-family: "Spectral SC", serif;
+    font-weight: 500;
   }
 
   &-secondary {
     font-size: 2.6rem;
     margin: 1rem 0;
-    font-family: "Spectral SC", serif;
+    font-weight: 400;
   }
-}
-
-
-.about {
-    &__text {
-        font-size: 1.5rem;
-    }
-
-    &__image {
-        width: 40%;
-        margin: 2rem;
-        box-shadow: 0 0 1rem rgba(#000, .4);
-    }
 }
 
 .service-card {
-    margin: 2rem;
-    padding: 1rem 2rem;
-    flex: 1;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  flex: 1;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 
-    &__name {
-        font-size: 2.5rem;
-        font-weight: 400;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    &__price {
-      font-size: 5rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-
-    &__img {
-      width: 15rem;
-      height: 15rem;
-      border-radius: 50%;
-      background-size: cover;
-      background-position: center;
-      margin: 1rem;
-      &--1 {
-        background-image: url(../img/basic-wash.jpg);
-      }
-
-      &--2 {
-        background-image: url(../img/basic-detailing.jpg);
-      }
-
-      &--3 {
-        background-image: url(../img/full-detailing.jpg);
-      }
-    }
-
-    &__summary {
-      font-size: 1.6rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    &__details-btn {
-      text-decoration: none;
-      color: black;
-      background-image: linear-gradient(to right bottom, yellow 10%, grey);
-      padding: 1rem 1.5rem;
-      border-radius: 100px;
-      font-size: 2rem;
-      box-shadow: .2rem .5rem .5rem rgba(#000, .4);
-
-      &:hover {
-        transform: translateY(-.1rem);
-        box-shadow: .2rem .6rem .6rem rgba(#000, .4);
-      }
-    }
-}
-
-.link {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
-    background-color: yellow;
-    padding: 1rem 2rem;
-    margin: 1rem;
-    border-radius: 100px;
-    box-shadow: 0 0 1rem rgba(#000, .4);
-    transition: all .2s;
-
-    &:hover {
-        transform: translateY(-.2rem);
-        box-shadow: 0 .2rem 1rem rgba(#000, .4);
-    }
-}
-
-.hours {
-  &__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  &__name {
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #000;
   }
 
-  &__item {
+  &__summary {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 }
 
-.list__services {
+.list {
+  font-size: 1.8rem;
   list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .hrule {
@@ -228,5 +193,5 @@
   border: 0;
   height: 2px;
   margin: 3rem 0;
-  background-image: -webkit-linear-gradient(left, #fff, #ccc, #fff);
+  background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
 }

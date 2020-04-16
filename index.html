@@ -4,37 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Spectral+SC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Car Detailing</title>
     </head>
     <body>
         <div class="container">
-            <nav class="nav-bar">
-                <div class="nav-bar__container">
-                    <div class="nav-bar__company-name">C&amp;S Car Cleaning Services</div>
-                    <div class="nav-bar__item">
-                        <a href="#header" class="nav-bar__link nav-bar__link__home">Home</a>
-                    </div>
-                    <div class="nav-bar__item">
-                        <a href="#services" class="nav-bar__link nav-bar__link__services">Services</a>
-                    </div>
-                    <div class="nav-bar__item">
-                        <a href="#about" class="nav-bar__link nav-bar__link__about">About</a>
-                    </div>
-                    <div class="nav-bar__item">
-                        <a href="#contact" class="nav-bar__link nav-bar__link__contact">Contact</a>
+            <header id="header" class="header">
+                <div class="header__main">
+                    <div class="header__main__divider"></div>
+                    <h1>C&amp;S</h1>
+                    <h2>Car Cleaning Service LLC</h2>
+                    <div class="header__main__contact">
+                        <p>(704)813-0530</p>
+                        <p>c.s.autodetailings@gmail.com</p>
+                        <a class="address" href="https://www.google.com/maps/place/C+%26+S+Car+Cleaning+Service,+LLC./@35.2528818,-81.1719213,17z/data=!4m13!1m7!3m6!1s0x8856c005e70162a5:0xd9ade15f688aa37e!2s803+E+Garrison+Blvd,+Gastonia,+NC+28054!3b1!8m2!3d35.2528774!4d-81.1697326!3m4!1s0x8856c14f9908c5e5:0x576d0aa54c82b6c9!8m2!3d35.2528774!4d-81.1697326">
+                            803 East Garrison Blvd,<br>
+                            Gastonia, NC 28054
+                        </a>
                     </div>
                 </div>
-            </nav>
-            <header id="header" class="header">
-                <!-- <div class="header__backdrop">
-                    <h1 class="header__primary">C&amp;S</h1>
-                    <h2 class="header__sub">Car Cleaning Service LLC</h2>
-                    <span class="header__phone">(704)813-0530</span>
-                </div> -->
-                <div class="header__left"></div>
-                <div class="header__right"></div>
+                <div class="header__photos">
+                    <img src="img/IMG_1699.jpg" alt="Header Photo" class="header__photo header__photo--1">
+                    <img src="img/water.jpg" alt="Header Photo" class="header__photo header__photo--2">
+                    <img src="img/keys.jpg" alt="Header Photo" class="header__photo header__photo--3">
+                </div>
+                <div class="header__sub">
+                    <div class="header__sub__sm_divider"></div>
+                    <div class="header__sub__sm_divider"></div>
+                    <div class="header__sub__square_divider"></div>
+                </div>
             </header>
             <section id="services" class="section section__services">
                 <h2 class="heading-primary"> Our Services</h2>
@@ -42,65 +41,59 @@
                 <div class="container__services">
                     <div class="service-card">
                         <span class="service-card__name">Basic Wash</span>
-                        <div class="service-card__img service-card__img--1"></div>
                         <p class="service-card__summary">
-                            This package includes a simple wash of the exterior and vacuuming of interior
+                            Exterior - Wash, Rinse wheel wells, and tire shine
                         </p>
-                        <a href="#basic_wash" class="service-card__details-btn">Details</a>
+                        <p class="service-card__summary">
+                            Interior - Vacuum, wipe down dash/console, door jambs, and windows
+                        </p>
+                        <ul class="list">
+                            <li>Cars - $30</li>
+                            <li>Mid Size (Mini Van) - $35</li>
+                            <li>Full Size (SUV, Van, Trucks) - $40</li>
+                        </ul>
                     </div>
                     <div class="service-card">
                         <span class="service-card__name">Basic Detailing</span>
-                        <div class="service-card__img service-card__img--2"></div>
                         <p class="service-card__summary">
-                            This package includes the basic wash, plus a coat of wax
+                            Includes Basic Wash &#43; wash floor mats and a coat of wax
                         </p>
-                        <a href="#basic_detail" class="service-card__details-btn">Details</a>
+                        <ul class="list">
+                            <li>Cars - $75</li>
+                            <li>SUV/Trucks - $100</li>
+                        </ul>
                     </div>
                     <div class="service-card">
                         <span class="service-card__name">Full Detailing</span>
-                        <div class="service-card__img service-card__img--3"></div>
                         <p class="service-card__summary">
-                            This package includes the Basic Detailing, plus we will wash engine compartment, under cariage, and shampoo interior
+                            Exterior - Wash engine compartment, door jambs, wheel wells, under carriage, buff was, tire shine, trim, and windows
                         </p>
-                        <a href="#full_detail" class="service-card__details-btn">Details</a>
+                        <p class="service-card__summary">
+                            Interior - Vacuum, Clean Panels, Shampoo Floor/Upholstery, Trunk, and Windows
+                        </p>
+                        <ul class="list">
+                            <li>Cars - $150</li>
+                            <li>Mid Size - $175</li>
+                            <li>Full Size - $200</li>
+                        </ul>
                     </div>
                     <div class="service-card">
                         <span class="service-card__name">Extras</span>
                         <p class="service-card__summary">
-                            Here are some extra services that can be purchased either on their own or in addition to any packages
+                            Services that can be purchased either on their own or in addition to any packages
                         </p>
-                        <a href="#extras" class="service-card__details-btn">Details</a>
+                        <ul class="list">
+                            <li>Scotch Guard - $60</li>
+                            <li>Spot Removal - $10</li>
+                            <li>Shampoo Carpet - $30</li>
+                            <li>Leather Clean &#43; Condition&nbsp;-&nbsp;$25</li>
+                            <li>Water Spot Removal&nbsp;-&nbsp;Ask for price</li>
+                        </ul>
                     </div>
                 </div>
             </section>
-            <section id="about" class="section section__about">
-                <div class="about__info">
-                    <h2 class="heading-primary">About Us</h2>
-                    <p class="about__text">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, dolorum doloremque tenetur corrupti eaque similique repellat quibusdam minus repudiandae odio perferendis officiis? Excepturi recusandae laboriosam architecto, qui laborum sint tempore?
-                    </p>
-                </div>
-                <img src="img/people-looking-at-laptop-computer-1595391.jpg" alt="family photo" class="about__image">
-            </section>
-            <section id="contact" class="section section__contact">
-                <h2 class="heading-primary">Contact Us</h2>
-                <span class="address">803 East Garrison Blvd, Gastonia, NC 28054</span>
-                <span class="phone">(704)813-0530</span>
-                <span class="email">c.s.autodetailings@gmail.com</span>
-                <h3 class="heading-secondary">Hours</h3>
-                <ul class="hours__list">
-                    <li class="hours__item">Monday-Friday: 8AM-5PM</li>
-                    <li class="hours__item">Saturday: 10AM-5PM</li>
-                    <li class="hours__item">Sunday: Closed</li>
-                </ul>
-            </section>
             <footer class="footer">
-                <div class="footer_links">
-                    <a href="#" class="footer__link">Terms &amp; Conditions</a>
-                    |
-                    <a href="#" class="footer__link">Privacy Policy</a>
-                </div>
-                <span class="copywrite">&copy; C&S Car Cleaning Services</span>
+                <span class="copywrite">&copy; 2020 C&amp;S Car Cleaning Services. All Rights Reserved</span>
             </footer>
     </body>
 </html>
