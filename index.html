@@ -25,9 +25,18 @@
                     </div>
                 </div>
                 <div class="header__photos">
-                    <img src="img/IMG_1699.jpg" alt="Header Photo" class="header__photo header__photo--1">
-                    <img src="img/water.jpg" alt="Header Photo" class="header__photo header__photo--2">
-                    <img src="img/keys.jpg" alt="Header Photo" class="header__photo header__photo--3">
+                    <picture class="header__photo header__photo--1">
+                        <source srcset="img/IMG_1699_sm.jpg" media="(max-width: 572px)">
+                        <img srcset="img/IMG_1699.jpg" alt="Header Photo" class="header__photo header__photo--1">
+                    </picture>
+                    <picture class="header__photo header__photo--2">
+                        <source srcset="about:blank" media="(max-width: 700px)">
+                        <img src="img/water.jpg" alt="Header Photo" class="header__photo header__photo--2">
+                    </picture>
+                    <picture class="header__photo header__photo--3">
+                        <source srcset="about:blank" media="(max-width: 700px)">
+                        <img src="img/keys.jpg" alt="Header Photo" class="header__photo header__photo--3">
+                    </picture>
                 </div>
                 <div class="header__sub">
                     <div class="header__sub__sm_divider"></div>
